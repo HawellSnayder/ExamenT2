@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	
+	<head>
+		<title>Listado de productos</title>
+		<style>
+			html{
+				background-color: #c5dec9;
+			}
+		</style>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+	</head>
+	<body>
+		<h1 align="center">
+			Registrar Productos
+		</h1>
+		
+		<form th:action="@{/vistas/GuardarMedico}" method="post" 
+	th:object="${regmedico}">
+		<table align="center" border="2">
+			<input type="hidden" th:field="*{IDMEDICOT2}">
+			<tr>
+				<td>
+					nombre
+				</td>
+				<td>
+					<input type="text" th:field="*{NOMBRET2}">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					apellido
+				</td>
+				<td>
+					<input type="text" th:field="*{APELLIDOT2}">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					email
+				</td>
+				<td>
+					<input type="email" th:field="*{EMAILT2}">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					dni
+				</td>
+				<td>
+					<input type="text" th:field="*{DNIT2}">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					estado civil
+				</td>
+				<td>
+					<input type="text" th:field="*{ESTADOCIVILT2}">
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					fecha nacimiento
+				</td>
+				<td>
+					<input type="date" th:field="*{FECHANACIMT2}">
+				</td>
+			</tr>
+			<tr>
+
+				<td colspan="2" align="center">
+					<input type="submit" value="registrar medico" class="btn btn-primary">
+				</td>
+			</tr>		
+</table>
+	</form>
+		
+	</body>
+	</html>
